@@ -1,0 +1,83 @@
+body.#{$body_class} {
+    background-color: $body_bg;
+    color: $body_color;
+
+    progress {
+        color: $progress_color;
+
+        &::-webkit-progress-value {
+            background-color: $progress_color;
+        }
+    }
+
+    a {
+        color: $link_color;
+        border-color: $link_color_light;
+
+        &:hover {
+            color: $link_hover_color;
+            border-color: $link_color;
+        }
+    }
+
+    header {
+        .masthead, nav {
+            background: $body_bg;
+        }
+    }
+
+    footer {
+        .quote {
+            color: $light_text_color;
+            
+            .fa {
+                color: $light_text_color;
+            }
+        }
+
+        .copyright {
+            color: $light_text_color;
+        }
+    }
+
+    .index {
+        .insta-holder {
+            a {
+                color: white;
+            }
+            .insta-item {
+                .meta {
+                    color: $body_bg;
+
+                    &:hover {
+                        background: rgba($link_hover_color, 0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .blog {
+
+        .post-list {
+
+            li {
+
+                .post-meta {
+                    color: $light_text_color;
+                }
+            }
+        }
+    }
+
+    .post {
+        .post-meta {
+            color: $light_text_color;
+        }
+
+        blockquote {
+            background-color: $light_bg_color;
+            border-color: $link_color;
+        }
+    }
+}

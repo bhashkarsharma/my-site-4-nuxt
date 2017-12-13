@@ -1,0 +1,357 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: all 0.5s;
+}
+
+progress {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    height: 5px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &::-webkit-progress-bar {
+        background-color: transparent;
+    }
+}
+
+a {
+    border-bottom: 3px solid;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+header {
+    padding: 1em;
+
+    a {
+        border: none;
+    }
+
+    .masthead-box {
+        margin-bottom: 10px;
+        text-align: center;
+
+        .masthead {
+            display: inline-block;
+            font-size: 4em;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    nav {
+        display: inline-block;
+
+        ul {
+            font-family: Monaco, Menlo, "Courier New", Courier, monospace;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 10px;
+                padding: 5px;
+
+                &:first-child {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    margin: auto;
+    padding: 1em 2em;
+}
+
+footer {
+    margin: auto;
+    max-width: 600px;
+    padding: 1em 2em;
+
+    .quote {
+        margin: 1em;
+        text-align: center;
+
+        a {
+            border: none;
+        }
+
+        .fa {
+            font-size: 2em;
+        }
+
+        .text {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+
+            p {
+                display: inline;
+            }
+        }
+
+        .author {
+            font-size: 0.75em;
+            margin-top: 5px;
+        }
+    }
+    
+    .links {
+        font-family: "FontAwesome";
+        text-align: center;
+        
+        a {
+            border: none;
+            font-size: 2em;
+            margin: 0 0.45em;
+            padding: 0.4em;
+            text-decoration: none;
+            
+            &.icon {
+                
+                &.fa-envelope:hover {
+                    color: #8e8e8e;
+                }
+                
+                &.fa-github:hover {
+                    color: #55a532;
+                }
+                
+                &.fa-instagram:hover {
+                    color: #d047d1;
+                }
+                
+                &.fa-linkedin:hover {
+                    color: #007bb6;
+                }
+                
+                &.fa-twitter:hover {
+                    color: #55acee;
+                }
+            }
+        }
+    }
+    
+    .copyright {
+        margin: 20px auto;
+        text-align: center;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+.video-box {
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    position: relative;
+    
+    iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+twitterwidget {
+    margin: auto;
+}
+
+.index {
+    .insta-holder {
+        column-count: 5;
+        column-gap: 5px;
+
+        a {
+            border: 0;
+        }
+
+        .insta-item {
+            display: inline-block;
+            position: relative;
+
+            .meta {
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: all 0.5s;
+                width: 100%;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                .likes {
+                    display: block;
+                    font-size: 1.25em;
+                    margin: 100px auto 0;
+                    text-align: center;
+                }
+
+                .caption {
+                    bottom: 10px;
+                    left: 10px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.blog {
+    .post-list {
+        list-style-type: none;
+        padding-left: 0;
+
+        li {
+            margin: 10px 0;
+
+            .post-meta {
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.post {
+    max-width: 600px;
+
+    .post-meta {
+        font-size: 0.9em;
+    }
+
+    .post-content {
+        font-size: 1.1em;
+        line-height: 1.4em;
+        
+        blockquote {
+            border-left-width: 5px;
+            border-left-style: solid;
+            margin: 0;
+            padding: 10px;
+    
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.lists {
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        border: 0 none;
+        margin: 20px;
+    }
+}
+
+.reading {
+    a {
+        border: 0 none;
+    }
+
+    .gr_grid_book_container {
+        float: left;
+        width: 98px;
+        height: 160px;
+        padding: 0px 0px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1200px) {
+    footer {
+        .links {
+            a {
+                font-size: 2em;
+                margin: 0 0.45em;
+                padding: 0.4em;
+            }
+        }
+    }
+    
+    .index {
+        .insta-holder {
+            column-count: 4;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    footer {
+        .links {
+            a {
+                font-size: 2em;
+                margin: 0 0.45em;
+                padding: 0.4em;
+            }
+        }
+    }
+
+    .index {
+        .insta-holder {
+            column-count: 3;
+        }
+    }
+}
+@media (max-width: 800px) {
+    footer {
+        .links {
+            a {
+                font-size: 2em;
+                margin: 0 0.2em;
+                padding: 0.2em;
+            }
+        }
+    }
+
+    .index {
+        .insta-holder {
+            column-count: 2;
+        }
+    }
+}
+@media (max-width: 400px) {
+    footer {
+        .links {
+            a {
+                font-size: 1.5em;
+                margin: 0 0.2em;
+                padding: 0.2em;
+            }
+        }
+    }
+
+    .index {
+        .insta-holder {
+            column-count: 1;
+        }
+    }
+}
+
+@import "_scss/day";
+@import "_scss/night";
